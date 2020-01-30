@@ -24,6 +24,12 @@ class HomeController extends Controller
             app('translator')->setLocale($request->getPreferredLanguage());
         }
 
-        return view('index');
+        if(app('translator')->getLocale() == 'fr'){
+            $cv = '/pdf/CV_Antonin_Guyot.pdf';
+        } else {
+            $cv = '/pdf/Antonin_Guyot_Résumé.pdf';
+        }
+
+        return view('index', compact('cv'));
     }
 }
