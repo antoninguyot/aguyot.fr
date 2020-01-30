@@ -65,4 +65,7 @@
         </li>
     </ul>
     <hr>
+    <div class="center">
+        <i><small>The code of this site is open-source and available on <a href="https://github.com/anto2oo/aguyot.fr">Github</a></small></i>
+    </div>
 @endsection

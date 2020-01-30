@@ -19,6 +19,10 @@
             line-height: 1.2;
             font-family: 'Raleway', sans-serif;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway:700" rel="stylesheet">
 </head>
