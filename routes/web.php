@@ -11,18 +11,9 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return view('hello-fr');
-});
-
-$router->get('fr', function () use ($router) {
-    return view('hello-fr');
-});
-
-$router->get('en', function () use ($router) {
-    return view('hello-en');
-});
-
 $router->get('notes', function () use ($router) {
     return view('notes');
 });
+
+
+$router->get('/[{locale:[A-Za-z]{2,2}$}]', 'HomeController@index');
