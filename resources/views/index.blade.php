@@ -3,13 +3,13 @@
 @section('body')
     <header>
         <h1 style="display: inline;">Antonin Guyot
-            @if(app('translator')->getLocale() == 'fr')
-                <a href="/en">
-                    <img src="/images/en.png" style="max-width: 30px" alt="English language">
-                </a>
-            @else
+            @if(app('translator')->getLocale() == 'en')
                 <a href="/fr">
                     <img src="/images/fr.png" style="max-width: 30px" alt="Langage français">
+                </a>
+            @else
+                <a href="/en">
+                    <img src="/images/en.png" style="max-width: 30px" alt="English language">
                 </a>
             @endif
         </h1>
