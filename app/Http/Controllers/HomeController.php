@@ -21,7 +21,7 @@ class HomeController extends Controller
         if(isset($locale)){
             app('translator')->setLocale($locale);
         } else {
-            app('translator')->setLocale($request->getPreferredLanguage());
+            app('translator')->setLocale($request->getLocale());
         }
 
         if(app('translator')->getLocale() == 'fr'){
