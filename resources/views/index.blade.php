@@ -22,7 +22,7 @@
         <a href="https://www.univ-paris13.fr">{{ __("l'Université Sorbonne Paris Nord") }}</a>.
     </p>
     <p>
-        {{ __("En cas de besoin, vous pouvez télecharger mon") }} <a href="{{ $cv }}">{{ __("CV") }}</a>.
+        {{ __("En cas de besoin, vous pouvez télecharger mon") }} <a href="https://static.ateros.fr/IEU83axJDLtVvqgSZzFRTuN9PWfMXK.pdf">{{ __("CV") }}</a>.
     </p>
     <p>
         {!! __("Je programme principalement en PHP (avec le framework :laravel), mais j'ai des compétences dans l'administration système plus généralement.", ['laravel' => '<a href="https://laravel.com">Laravel</a>']) !!}
