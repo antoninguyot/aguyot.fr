@@ -4,22 +4,18 @@
     <header>
         <h1 style="display: inline;">Antonin Guyot
             @if(app('translator')->getLocale() == 'en')
-                <a href="/fr">
-                    <img src="/images/fr.png" style="max-width: 30px" alt="Langage français">
-                </a>
+                <a href="/fr">🇫🇷</a>
             @else
-                <a href="/en">
-                    <img src="/images/en.png" style="max-width: 30px" alt="English language">
-                </a>
+                <a href="/en">🇬🇧</a>
             @endif
         </h1>
         <img src="/images/me.jpg" style="display: inline; max-width: 150px; float: right">
 
     </header>
-    <h2>{{ __("À propos") }}</h2>
+    <h2>👨‍💻 {{ __("À propos") }}</h2>
     <p>
-        {{ __("Étudiant de :age ans en deuxième année de DUT Réseaux & Télécoms à", ['age' => \Carbon\Carbon::parse('2000-09-19')->age]) }}
-        <a href="https://www.univ-paris13.fr">{{ __("l'Université Sorbonne Paris Nord") }}</a>.
+        {{ __("Étudiant de :age ans en Génie Informatique à", ['age' => \Carbon\Carbon::parse('2000-09-19')->age]) }}
+        <a href="https://utc.fr" target="_blank">{{ __("l'UTC") }}</a>.
     </p>
     <p>
         {{ __("En cas de besoin, vous pouvez télecharger mon") }} <a href="https://static.ateros.fr/IEU83axJDLtVvqgSZzFRTuN9PWfMXK.pdf">{{ __("CV") }}</a>.
@@ -29,22 +25,28 @@
     </p>
 
     <hr>
-    <h2>{{ __("Projets récents") }}</h2>
+    <h2>💻 {{ __("Projets récents") }}</h2>
     <ul>
         <li>
-            <a href="https://github.com/anto2oo/furnace">furnace</a>, {{ __("une collection de scripts bash permettant d'installer et de gérer le stack LAMP sur Centos 7.") }}
+            <a href="https://cl-doc.aguyot.fr/" target="_blank">CL-doc</a>, {{ __("un site moderne contenant la documentation officielle de Common Lisp.") }}
         </li>
         <li>
-            <a href="https://github.com/anto2oo/telegram-sh">telegram-sh</a>, {{ __("une petite librairie pour shell POSIX permettant de scripter simplements des bots Telegram.") }}
+            <a href="https://legiscan.aguyot.fr" target="_blank">Légiscan</a>, {{ __("un service permettant de surligner les références dans des textes juridiques.") }}
         </li>
         <li>
-            <a href="https://github.com/anto2oo/xiropht-rpc-php">xiropht-rpc-php</a>, {{ __("un paquet composer permettant d'interagir avec la cryptomonnaie Xiropht en PHP orienté-objet.") }}
+            <a href="https://ateros.fr/services/pay" target="_blank">Ateros Pay</a>, {{ __("une gateway de paiement abstrayant les APIs de Stripe et PayPal.") }}
+        </li>
+        <li>
+            <a href="https://ateros.fr/services/analytics" target="_blank">Ateros Analytics</a>, {{ __("un service d'analytics traitant de gros volumes de données.") }}
+        </li>
+        <li>
+            <a href="https://github.com/anto2oo/telegram-sh" target="_blank">telegram-sh</a>, {{ __("une petite librairie pour shell POSIX permettant de scripter simplements des bots Telegram.") }}
         </li>
     </ul>
-    <p>{{ __("Tous mes autres projets sont disponibles sur") }} <a
+    <p>{{ __("Mes autres projets sont disponibles sur") }} <a
             href="https://github.com/anto2oo">{{ __("ma page Github") }}</a></p>
     <hr>
-    <h2>{{ __("Expériences professionnelles") }}</h2>
+    <h2>💼 {{ __("Expériences professionnelles") }}</h2>
     <ul>
         <li><b>2018
                 - {{ __("maintenant") }}</b>: {{ __("Je crée des sites et des applications web pour des professionnels en tant qu'indépendant.") }}
@@ -54,15 +56,11 @@
         </li>
     </ul>
     <hr>
-    <h2>{{ __("Contact") }}</h2>
+    <h2>📫 {{ __("Contact") }}</h2>
     <ul>
-        <li>
-            <a href="https://www.linkedin.com/in/antonin-guyot-86715917a/">Linkedin</a>, {{ __("pour les demandes professionelles.") }}
-        </li>
-        <li><a href="https://t.me/antnin">Telegram</a>, {{ __("pour un contact rapide.") }}
-        </li>
-        <li><a href="mailto:antonin.guyot@icloud.com">{{ __("Par mail") }}</a>.
-        </li>
+        <li>Mail : <a href="mailto:antonin.guyot@icloud.com">antonin.guyot@icloud.com</a>.</li>
+        <li>Twitter  : <a href="https://twitter.com/baccaloreal">@baccaloreal</a></li>
+        <li>Telegram : <a href="https://t.me/antnin">@antnin</a></li>
     </ul>
     <hr>
     <div class="center">
