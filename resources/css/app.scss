@@ -1,0 +1,30 @@
+// Load website fonts
+@import "fonts";
+
+// Water CSS used as a base to keep browser consistency and dark theme
+@import "water.css";
+
+// Custom properties that overwrites some water.css defaults
+:root {
+    --text-main: #444;
+    --text-bright: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-body: #1E1E1E;
+        --text-main: #989898;
+        --text-bright: #E1E1E1;
+    }
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    max-width: 650px;
+    //line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+}
