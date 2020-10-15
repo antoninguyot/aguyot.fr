@@ -11,9 +11,7 @@
 |
 */
 
-$router->get('notes', function () use ($router) {
-    return view('notes');
-});
+/** @var \Laravel\Lumen\Routing\Router $router */
 
-
-$router->get('/[{locale:[A-Za-z]{2,2}$}]', 'HomeController@index');
+$router->get('/', 'HomeController@index');
+$router->get('notes', 'HomeController@notes');
