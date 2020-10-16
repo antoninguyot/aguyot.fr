@@ -25,6 +25,10 @@ $app->withFacades();
 
 // $app->withEloquent();
 
+// Enable the Blade Facade
+//$app->alias('blade.compiler', Illuminate\View\Compilers\BladeCompiler::class);
+
+
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings
@@ -76,7 +80,7 @@ $app->middleware([
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 

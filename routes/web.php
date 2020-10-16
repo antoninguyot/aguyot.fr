@@ -15,3 +15,4 @@
 
 $router->get('/', 'HomeController@index');
 $router->get('notes', 'HomeController@notes');
+$router->get('cv', 'HomeController@cv');

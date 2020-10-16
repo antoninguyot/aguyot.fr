@@ -13,4 +13,9 @@ class HomeController extends Controller
     {
         return view('notes');
     }
+
+    public function cv()
+    {
+        return view('cv');
+    }
 }

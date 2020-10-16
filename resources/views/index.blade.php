@@ -11,20 +11,18 @@
 
     <header>
         <h1 style="">Antonin Guyot</h1>
-        <div style="display: block">
-            <img src="/images/me.jpg" style="margin: 20px; max-width: 150px; float: right;">
-        </div>
+        <img src="{{ URL::to('images/me.jpg') }}" style="margin: 20px; max-width: 150px; float: right;" alt="Portrait Antonin Guyot">
     </header>
 
     <h2>👨‍💻 {{ __("À propos") }}</h2>
 
     <p>
         {{ __("Étudiant de :age ans en Génie Informatique à", ['age' => \Carbon\Carbon::parse('2000-09-19')->age]) }}
-        <a href="https://utc.fr" target="_blank">{{ __("l'UTC") }}</a>.
+        <a href="https://utc.fr" target="_blank" rel="noreferrer">{{ __("l'UTC") }}</a>.
     </p>
     <p>
         {{ __("En cas de besoin, vous pouvez télecharger mon") }} <a
-            href="https://static.ateros.fr/IEU83axJDLtVvqgSZzFRTuN9PWfMXK.pdf">{{ __("CV") }}</a>.
+            href="{{ URL::to('cv') }}">{{ __("CV") }}</a>.
     </p>
     <p>
         {!! __("Je programme principalement en PHP (avec le framework :laravel), mais j'ai des compétences dans l'administration système plus généralement.", ['laravel' => '<a href="https://laravel.com">Laravel</a>']) !!}
@@ -35,37 +33,30 @@
     <ul>
         <li>
             <a href="https://cl-doc.aguyot.fr/"
-               target="_blank">CL-doc</a>, {{ __("un site moderne contenant la documentation officielle de Common Lisp.") }}
+               target="_blank" rel="noreferrer">CL-doc</a>, {{ __("un site moderne contenant la documentation officielle de Common Lisp.") }}
         </li>
         <li>
             <a href="https://legiscan.aguyot.fr"
-               target="_blank">Légiscan</a>, {{ __("un service permettant de surligner les références dans des textes juridiques.") }}
+               target="_blank" rel="noreferrer">Légiscan</a>, {{ __("un service permettant de surligner les références dans des textes juridiques.") }}
         </li>
         <li>
-            <a href="https://ateros.fr/services/pay" target="_blank">Ateros
+            <a href="https://ateros.fr/services/pay" target="_blank" rel="noreferrer">Ateros
                 Pay</a>, {{ __("une gateway de paiement abstrayant les APIs de Stripe et PayPal.") }}
         </li>
         <li>
-            <a href="https://ateros.fr/services/analytics" target="_blank">Ateros
+            <a href="https://ateros.fr/services/analytics" target="_blank" rel="noreferrer">Ateros
                 Analytics</a>, {{ __("un service d'analytics traitant de gros volumes de données.") }}
         </li>
         <li>
             <a href="https://github.com/anto2oo/telegram-sh"
-               target="_blank">telegram-sh</a>, {{ __("une petite librairie pour shell POSIX permettant de scripter simplements des bots Telegram.") }}
+               target="_blank" rel="noreferrer">telegram-sh</a>, {{ __("une petite librairie pour shell POSIX permettant de scripter simplements des bots Telegram.") }}
         </li>
     </ul>
     <p>{{ __("Mes autres projets sont disponibles sur") }} <a
             href="https://github.com/anto2oo">{{ __("ma page Github") }}</a></p>
     <hr>
     <h2>💼 {{ __("Expériences professionnelles") }}</h2>
-    <ul>
-        <li><b>2018
-                - {{ __("maintenant") }}</b>: {{ __("Je crée des sites et des applications web pour des professionnels en tant qu'indépendant.") }}
-        </li>
-        <li><b>2014</b> : {{ __("Stage d'une semaine dans l'entreprise de communication") }} <a
-                href="https://www.natevacommunication.fr/">Nateva</a>, {{ __("ce qui m'a permis d'acquérir les premières notions de relation client.") }}
-        </li>
-    </ul>
+        <i>{{ __("Déplacé dans") }} <a href="{{ URL::to('cv') }}">{{ __("CV") }}</a></i>
     <hr>
     <h2>📫 {{ __("Contact") }}</h2>
     <ul>
@@ -74,7 +65,4 @@
         <li>Telegram : <a href="https://t.me/antnin">@antnin</a></li>
     </ul>
     <hr>
-    <div class="center">
-        <i><small>The code of this site is open-source and available on <a href="https://github.com/anto2oo/aguyot.fr">Github</a></small></i>
-    </div>
 @endsection
