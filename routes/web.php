@@ -16,3 +16,6 @@
 $router->get('/', 'HomeController@index');
 $router->get('notes', 'HomeController@notes');
 $router->get('cv', 'HomeController@cv');
+$router->get('locale/{locale}', function ($locale) {
+    return redirect('/')->withCookie(new \Symfony\Component\HttpFoundation\Cookie('l', $locale));
+});

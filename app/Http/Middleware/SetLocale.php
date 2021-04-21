@@ -23,7 +23,10 @@ class SetLocale
      */
     public function handle($request, Closure $next)
     {
-        if($request->has($this->localeKey)){
+        if($request->hasCookie($this->localeKey)){
+            $locale = $request->cookie($this->localeKey);
+        }
+        elseif($request->has($this->localeKey)){
             $locale = $request->get($this->localeKey);
         } else {
             // 'en_US' will be trimmed to 'en'
