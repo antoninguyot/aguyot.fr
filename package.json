@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/anto2oo/aguyot.fr#readme",
   "devDependencies": {
+    "caniuse-lite": "^1.0.30001214",
     "cross-env": "^7.0.2",
     "laravel-mix": "^5.0.7",
     "laravel-mix-purgecss": "^5.0.0",
